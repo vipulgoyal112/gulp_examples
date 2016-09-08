@@ -10,3 +10,7 @@ gulp.task('convert', function () {
 	pipe(sass()).
 	pipe(gulp.dest('src/app/css'));
 });
+
+gulp.task('watch', function() {
+	gulp.watch('src/app/scss/*', ['convert']);
+});
